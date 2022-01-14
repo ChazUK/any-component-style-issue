@@ -1,0 +1,11 @@
+@use '../vars/spacing';
+
+$gutter-vertical: spacing.$eds-spacing-2xs;
+$gutter-horizontal: (
+  xs: spacing.$eds-spacing-2xs,
+  sm: spacing.$eds-spacing-xs,
+  md: spacing.$eds-spacing-sm,
+  lg: spacing.$eds-spacing-sm,
+  xl: spacing.$eds-spacing-sm,
+);
+$num-columns: 12;

@@ -1,0 +1,25 @@
+<div
+  class="eds-base-banner-hero__background"
+  [ngStyle]="{ 'background-image': image ? 'url(\'' + image + '\')' : null }"
+></div>
+<eds-base-pattern
+  *ngIf="showPattern"
+  [transparent]="transparent"
+></eds-base-pattern>
+
+<div class="container">
+  <div class="grid">
+    <div class="eds-base-banner-hero__copy">
+      <h1 class="eds-base-banner-hero__title">{{ title }}</h1>
+      <p *ngIf="body" class="eds-base-banner-hero__body">{{ body }}</p>
+      <a
+        *ngIf="cta"
+        eds-base-cta
+        class="eds-base-banner-hero__cta"
+        [routerLink]="cta.routerLink"
+        [onDark]="true"
+        >{{ cta.text }}</a
+      >
+    </div>
+  </div>
+</div>

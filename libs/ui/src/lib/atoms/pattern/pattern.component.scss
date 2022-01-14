@@ -1,0 +1,91 @@
+@use '../../styles/functions/utils';
+@use '../../styles/vars/colors';
+
+$min-height: 100px;
+$svg-width: 460px;
+$svg-height: 720px;
+
+:host {
+  &.eds-base-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: utils.px-to-rem($min-height);
+    max-height: utils.px-to-rem($svg-height);
+    background: colors.$eds-color-red-bright;
+    color: colors.$eds-color-red;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+
+    .eds-base-pattern__fill {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 100%;
+      height: 100%;
+      background: colors.$eds-color-red;
+    }
+
+    &--dark-red {
+      background: colors.$eds-color-red;
+      color: colors.$eds-color-red-dark;
+
+      .eds-base-pattern__fill {
+        background: colors.$eds-color-red-dark;
+      }
+    }
+
+    &--turquoise {
+      background: colors.$eds-color-turquoise-bright;
+      color: colors.$eds-color-turquoise-dark;
+
+      .eds-base-pattern__fill {
+        background: colors.$eds-color-turquoise-dark;
+      }
+    }
+
+    &--yellow {
+      background: colors.$eds-color-yellow-bright;
+      color: colors.$eds-color-yellow-bright-75;
+
+      .eds-base-pattern__fill {
+        background: colors.$eds-color-yellow-bright-75;
+      }
+    }
+
+    &--transparent {
+      background: transparent;
+    }
+
+    &--left {
+      svg {
+        left: 0;
+      }
+
+      .eds-base-pattern__fill {
+        right: 100%;
+        left: auto;
+      }
+    }
+
+    &--right {
+      svg {
+        right: 0;
+        left: auto;
+      }
+
+      .eds-base-pattern__fill {
+        right: $svg-width;
+        left: auto;
+      }
+    }
+  }
+}

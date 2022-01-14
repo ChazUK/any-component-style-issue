@@ -1,0 +1,98 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { PatternComponent } from './pattern.component';
+import { Do, DoNot } from '../../storylibs/mdx.components.mdx';
+
+import patternColourDoNot from '../../storylibs/assets/pattern-colour-do-not.png';
+import patternCombiningDo from '../../storylibs/assets/pattern-combining-do.png';
+import patternCombiningDoNot from '../../storylibs/assets/pattern-combining-do-not.png';
+import patternSkewDoNot from '../../storylibs/assets/pattern-skew-do-not.png';
+import patternSparinglyDo from '../../storylibs/assets/pattern-sparingly-do.png';
+
+<Meta
+  title="Atoms/Pattern"
+  component={PatternComponent}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/8HCSreWVbMUgCpsJugJsDf/Public-(Copy)?node-id=934%3A0',
+    },
+  }}
+/>
+
+# Pattern
+
+Renders the simplified graphic pattern in a range of colour palettes, as defined in The Vanguard Brand Guidelines<sup><a href="#the-vanguard-brand-guidelines">1</a></sup>.  
+Consisting of a pair of two colour tones with minimal graphic forms which have been created from the curves and angles from our V closely cropped. It can be used with a background colour, or without to allow images or other content to still be visible.
+
+<Canvas>
+  <Story name="Pattern" height="300px">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Colour & Positioning
+
+The Pattern can be styled in 4 colour palettes, which should not be mixed with other palettes on the same page. They are available through the `palette` attribute:
+
+- Vanguard Red
+- Dark Red
+- Turquoise
+- Yellow
+
+The Pattern can also be positioned in 3 different orientations, which is can be changed by the `position` attribute:
+
+- Left
+- Center
+- Right
+
+When positioned `right` the Pattern should intersect with the bottom right corner.
+
+<div class="grid-col-3">
+<Do img={patternSparinglyDo}>
+
+**Do** use sparingly in a single page.
+
+</Do>
+<DoNot img={patternColourDoNot}>
+
+**Do not** change the colours in these patterns.
+
+</DoNot>
+<DoNot img={patternSkewDoNot}>
+
+**Do not** rotate, stretch, or skew the patterns.
+
+</DoNot>
+
+</div>
+
+## Combining patterns with additional elements
+
+We do not combine our patterns with other visual elements like icons, illustrations, or data visualisations. In specific use cases, we may use our patterns with photography, such as in the [Banner Hero](?path=/docs/organisms-banners-banner-hero).
+
+<div class="grid-col-2">
+<Do img={patternCombiningDo}>
+
+**Do** use with concise messaging, logos and simple UI elements like buttons or links.
+
+</Do>
+<DoNot img={patternCombiningDoNot}>
+
+**Do not** combine with large amound of text or other detailed visual elements like data visualisations or illustrations.
+
+</DoNot>
+</div>
+
+## API
+
+Selector: `eds-base-pattern`
+
+Ensure that the parent container for the Pattern has `position: relative`, it will then fill its full width and height.
+
+<ArgsTable of={PatternComponent} />
+
+## References
+
+- [The Vanguard Brand Guidelines - Visual Guidelines - Pattern](https://thevanguardgroup.sharepoint.com/sites/TheVanguardBrand/SitePages/Pattern.aspx) <sup id="the-vanguard-brand-guidelines">1</sup>
+
+export const Template = (args) => ({ props: args });

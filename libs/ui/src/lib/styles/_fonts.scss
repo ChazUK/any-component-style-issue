@@ -1,0 +1,108 @@
+@use 'sass:map';
+@use 'vars/fonts';
+
+// FF-Mark-Pro
+
+// FF-Mark-Regular
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+  src: url('../../assets/fonts/FF-Mark-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Regular.woff') format('woff');
+}
+
+// FF-Mark-Italic
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+  src: url('../../assets/fonts/FF-Mark-Italic.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Italic.woff') format('woff');
+}
+
+// FF-Mark-Bold
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+  src: url('../../assets/fonts/FF-Mark-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Bold.woff') format('woff');
+}
+
+// FF-Mark-Bold-Italic
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+  src: url('../../assets/fonts/FF-Mark-Bold-Italic.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Bold-Italic.woff') format('woff');
+}
+
+// FF-Mark-Heavy
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'heavy');
+  src: url('../../assets/fonts/FF-Mark-Heavy.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Heavy.woff') format('woff');
+}
+
+// FF-Mark-Heavy-Italic
+@font-face {
+  font-family: 'FF Mark Pro';
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'heavy');
+  src: url('../../assets/fonts/FF-Mark-Heavy-Italic.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Heavy-Italic.woff') format('woff');
+}
+
+// FF-Thorndale
+
+// FF-Thorndale-Regular
+@font-face {
+  font-family: 'Thorndale Regular';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+  src: url('../../assets/fonts/FF-Thorndale-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Thorndale-Regular.woff') format('woff');
+}
+
+// FF-Mark-Narrow
+
+// FF-Mark-Narrow-Regular
+@font-face {
+  font-family: 'FF Mark Narrow';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+  src: url('../../assets/fonts/FF-Mark-Narrow-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Narrow-Regular.woff') format('woff');
+}
+
+// FF-Mark-Narrow-Italic
+@font-face {
+  font-family: 'FF Mark Narrow';
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+  src: url('../../assets/fonts/FF-Mark-Narrow-Italic.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Narrow-Italic.woff') format('woff');
+}
+
+// FF-Mark-Narrow-Bold
+@font-face {
+  font-family: 'FF Mark Narrow';
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+  src: url('../../assets/fonts/FF-Mark-Narrow-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/FF-Mark-Narrow-Bold.woff') format('woff');
+}
+
+// FF-Mark-Narrow-Bold-Italic
+@font-face {
+  font-family: 'FF Mark Narrow';
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+  src: url('../../assets/fonts/FF-Mark-Narrow-Bold-Italic.woff2')
+      format('woff2'),
+    url('../../assets/fonts/FF-Mark-Narrow-Bold-Italic.woff') format('woff');
+}

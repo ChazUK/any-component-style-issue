@@ -1,0 +1,80 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { QuotationComponent } from './quotation.component';
+
+# Quotation
+
+The Quotation component can be used to show personal quotes about Vanguard history, performance and other related information.
+
+<Meta
+  title="Organisms/Quotation"
+  component={QuotationComponent}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/8HCSreWVbMUgCpsJugJsDf/Public-(Copy)?node-id=7901%3A23545',
+    },
+  }}
+  argTypes={{
+    quote: {
+      control: { type: 'text' },
+    },
+    image: {
+      control: { type: 'select' },
+    },
+    author: {
+      control: { type: 'text' },
+    },
+    occupation: {
+      control: { type: 'text' },
+    },
+    altText: {
+      control: { type: 'text' },
+    },
+  }}
+/>
+
+## Variants
+
+### Without Image
+
+<Canvas>
+  <Story
+    name="Without image"
+    args={{
+      quote:
+        '“The index fund is a most unlikely hero for the typical investor. It is no more (nor less) than a broadly diversified portfolio, typically run at rock-bottom costs, without the putative benefit of a brilliant, resourceful, and highly skilled portfolio manager.”',
+      author: 'John C. Bogle',
+      occupation: 'Founder of Vanguard',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### With Image
+
+<Canvas>
+  <Story
+    name="With image"
+    args={{
+      image: 'images/quote.jpeg',
+      quote:
+        '“The index fund is a most unlikely hero for the typical investor. It is no more (nor less) than a broadly diversified portfolio, typically run at rock-bottom costs, without the putative benefit of a brilliant, resourceful, and highly skilled portfolio manager.”',
+      author: 'John C. Bogle',
+      occupation: 'Founder of Vanguard',
+      altText: 'Image of a business man',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+### QuotationComponent
+
+Selector: `eds-base-quotation`
+
+<ArgsTable of={QuotationComponent} />
+
+export const Template = (args) => ({ props: args });

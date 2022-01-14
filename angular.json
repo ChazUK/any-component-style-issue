@@ -95,33 +95,28 @@
       },
       "tags": []
     },
-    "angular-app-e2e": {
-      "root": "apps/angular-app-e2e",
-      "sourceRoot": "apps/angular-app-e2e/src",
-      "projectType": "application",
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "any-component-style-issue",
       "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui"],
           "options": {
-            "cypressConfig": "apps/angular-app-e2e/cypress.json",
-            "devServerTarget": "angular-app:serve:development"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "angular-app:serve:production"
-            }
+            "jestConfig": "libs/ui/jest.config.js",
+            "passWithNoTests": true
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": ["apps/angular-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
           }
         }
       },
-      "tags": [],
-      "implicitDependencies": ["angular-app"]
+      "tags": []
     }
   }
 }

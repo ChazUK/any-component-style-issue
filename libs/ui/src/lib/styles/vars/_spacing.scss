@@ -1,0 +1,13 @@
+@use '../functions/utils';
+
+$eds-spacing-4xs: utils.px-to-rem(4px);
+$eds-spacing-3xs: utils.px-to-rem(8px);
+$eds-spacing-2xs: utils.px-to-rem(16px);
+$eds-spacing-xs: utils.px-to-rem(24px);
+$eds-spacing-sm: utils.px-to-rem(32px);
+$eds-spacing-md: utils.px-to-rem(48px);
+$eds-spacing-lg: utils.px-to-rem(64px);
+$eds-spacing-xl: utils.px-to-rem(80px);
+$eds-spacing-2xl: utils.px-to-rem(96px);
+$eds-spacing-3xl: utils.px-to-rem(112px);
+$eds-spacing-4xl: utils.px-to-rem(128px);

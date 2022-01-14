@@ -1,0 +1,148 @@
+@use 'sass:map';
+@use '../vars/fonts';
+@use '../vars/spacing';
+@use 'breakpoints';
+
+@mixin heavy {
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'heavy');
+}
+
+@mixin heavy-italic {
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'heavy');
+}
+
+@mixin bold {
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+}
+
+@mixin bold-italic {
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'bold');
+}
+
+@mixin regular {
+  font-style: normal;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+}
+
+@mixin regular-italic {
+  font-style: italic;
+  font-weight: map.get(fonts.$font-weights, 'regular');
+}
+
+@mixin h1-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-7xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-9xl;
+  }
+}
+
+@mixin h2-mixin {
+  margin-top: spacing.$eds-spacing-sm;
+  margin-bottom: spacing.$eds-spacing-sm;
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-5xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-8xl;
+  }
+}
+
+@mixin h3-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-4xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-6xl;
+  }
+}
+
+@mixin h4-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-3xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-4xl;
+  }
+}
+
+@mixin h5-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-2xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-3xl;
+  }
+}
+
+@mixin h6-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-xl;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-2xl;
+  }
+}
+
+@mixin small-heading-mixin {
+  @include heavy;
+
+  font-size: fonts.$eds-font-size-md;
+  line-height: 1.2;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-lg;
+  }
+}
+
+@mixin large-body-text-mixin {
+  font-size: fonts.$eds-font-size-md;
+  line-height: 1.4;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    font-size: fonts.$eds-font-size-xl;
+  }
+}
+
+@mixin standard-body-text-mixin {
+  font-size: fonts.$eds-font-size-sm;
+  line-height: 1.6;
+
+  @include breakpoints.media-breakpoint-up(md) {
+    line-height: 1.5;
+  }
+}
+
+@mixin paragraph {
+  @include standard-body-text-mixin;
+
+  margin-top: spacing.$eds-spacing-2xs;
+  margin-bottom: spacing.$eds-spacing-2xs;
+}
+
+@mixin article-text-mixin {
+  font-size: fonts.$eds-font-size-md;
+  line-height: 1.8;
+}
+
+@mixin small-text-mixin {
+  font-size: fonts.$eds-font-size-xs;
+  line-height: 1.5;
+}

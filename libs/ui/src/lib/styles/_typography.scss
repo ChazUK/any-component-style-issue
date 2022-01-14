@@ -1,0 +1,99 @@
+@use 'sass:map';
+@use 'mixins/typography';
+@use 'vars/colors';
+@use 'vars/fonts';
+@forward 'fonts';
+
+html,
+body {
+  color: colors.$eds-color-black;
+  font-family: fonts.$eds-mark-pro;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+h1,
+.h1 {
+  @include typography.h1-mixin;
+}
+
+h2,
+.h2 {
+  @include typography.h2-mixin;
+}
+
+h3,
+.h3 {
+  @include typography.h3-mixin;
+}
+
+h4,
+.h4 {
+  @include typography.h4-mixin;
+}
+
+h5,
+.h5 {
+  @include typography.h5-mixin;
+}
+
+h6,
+.h6 {
+  @include typography.h6-mixin;
+}
+
+.eds-subheading {
+  @include typography.small-heading-mixin;
+}
+
+.eds-large-body-text {
+  @include typography.large-body-text-mixin;
+}
+
+.eds-large-body-text-narrow {
+  font-family: map.get(fonts.$fonts, 'FF Mark Narrow', 'family');
+  @include typography.large-body-text-mixin;
+}
+
+p,
+.eds-standard-body-text {
+  @include typography.standard-body-text-mixin;
+}
+
+.eds-standard-body-text-narrow {
+  font-family: map.get(fonts.$fonts, 'FF Mark Narrow', 'family');
+  @include typography.standard-body-text-mixin;
+}
+
+.eds-article-text,
+.eds-long-form-text {
+  @include typography.article-text-mixin;
+}
+
+.eds-article-text-narrow,
+.eds-long-form-text-narrow {
+  font-family: map.get(fonts.$fonts, 'FF Mark Narrow', 'family');
+  @include typography.article-text-mixin;
+}
+
+.eds-small-text {
+  @include typography.small-text-mixin;
+}
+
+.eds-small-text-narrow {
+  font-family: map.get(fonts.$fonts, 'FF Mark Narrow', 'family');
+  @include typography.small-text-mixin;
+}
+
+a,
+.eds-text-link {
+  color: colors.$eds-color-blue;
+  text-decoration: underline;
+}
+
+.eds-block-quote {
+  font-family: map.get(fonts.$fonts, 'Thorndale Regular', 'family');
+}

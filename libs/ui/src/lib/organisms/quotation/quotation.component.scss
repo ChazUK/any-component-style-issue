@@ -1,0 +1,65 @@
+@use '../../styles/mixins/breakpoints';
+@use '../../styles/mixins/typography';
+@use '../../styles/vars/colors';
+@use '../../styles/vars/fonts';
+@use '../../styles/vars/spacing';
+@use 'sass:map';
+
+@import '../../styles/grids';
+@import '../../styles/containers';
+
+:host {
+  display: block;
+  margin: 0;
+  background-color: colors.$eds-color-black-4;
+  color: colors.$eds-color-black;
+  text-align: center;
+
+  .eds-base-quotation__quote {
+    margin-top: spacing.$eds-spacing-md;
+    margin-bottom: spacing.$eds-spacing-sm;
+    font-family: fonts.$eds-thorndale;
+    font-size: fonts.$eds-font-size-xl;
+    line-height: 1.25;
+
+    @include breakpoints.media-breakpoint-up(md) {
+      margin-top: spacing.$eds-spacing-lg;
+      font-size: fonts.$eds-font-size-4xl;
+    }
+  }
+
+  .eds-base-quotation__author {
+    @include typography.standard-body-text-mixin;
+
+    margin: 0;
+    font-weight: map.get(fonts.$font-weights, 'heavy');
+  }
+
+  .eds-base-quotation__occupation {
+    @include typography.standard-body-text-mixin;
+
+    margin-top: spacing.$eds-spacing-3xs;
+    margin-bottom: spacing.$eds-spacing-sm;
+  }
+
+  .eds-base-quotation__image {
+    display: none;
+    margin-top: spacing.$eds-spacing-lg;
+
+    img {
+      width: 100%;
+    }
+
+    @include breakpoints.media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &.eds-base-quotation--with-image {
+    .eds-base-quotation__copy {
+      @include breakpoints.media-breakpoint-up(md) {
+        text-align: left;
+      }
+    }
+  }
+}

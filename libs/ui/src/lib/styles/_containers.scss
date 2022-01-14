@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use 'mixins/breakpoints';
+@use 'mixins/containers';
+@use 'vars/grid';
+
+.container,
+.container-fluid,
+%container-fluid {
+  @include containers.make-container;
+}
+
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in containers.$container-max-widths {
+  .container-#{$breakpoint} {
+    @extend %container-fluid;
+  }
+
+  @include breakpoints.media-breakpoint-up(
+    $breakpoint,
+    breakpoints.$eds-breakpoints
+  ) {
+    $gutter-horizontal: map.get(grid.$gutter-horizontal, $breakpoint);
+
+    %responsive-container-#{$breakpoint} {
+      @if $container-max-width != 0 {
+        max-width: $container-max-width;
+      }
+
+      padding-right: #{$gutter-horizontal};
+      padding-left: #{$gutter-horizontal};
+    }
+
+    // Extend each breakpoint which is smaller or equal to the current breakpoint
+    $extend-breakpoint: true;
+
+    @each $name, $width in breakpoints.$eds-breakpoints {
+      @if $extend-breakpoint {
+        .container#{breakpoints.breakpoint-infix($name, breakpoints.$eds-breakpoints)} {
+          @extend %responsive-container-#{$breakpoint};
+        }
+
+        // Once the current breakpoint is reached, stop extending
+        @if $breakpoint == $name {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}

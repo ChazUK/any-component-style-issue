@@ -1,0 +1,10 @@
+@use '../vars/containers';
+@forward '../vars/containers';
+
+@mixin make-container() {
+  width: 100%;
+  padding-right: containers.$container-padding;
+  padding-left: containers.$container-padding;
+  margin-right: auto;
+  margin-left: auto;
+}

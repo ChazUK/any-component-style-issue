@@ -1,0 +1,116 @@
+@use 'sass:color';
+
+// Primary
+$eds-color-red: #c20029;
+$eds-color-white: #fff;
+$eds-color-legacy-red: #96151d;
+
+// Secondary
+$eds-color-red-pale: #ffeded;
+$eds-color-red-bright: #f6001e;
+$eds-color-red-dark: #660026;
+$eds-color-turquoise-pale: #def5f0;
+$eds-color-turquoise-bright: #00bda3;
+$eds-color-turquoise-dark: #007873;
+$eds-color-yellow-pale: #fff7de;
+$eds-color-yellow-bright: #ffad00;
+$eds-color-yellow-dark: #bf8200;
+
+// Neutrals
+$eds-color-black: #040505;
+$eds-color-black-87: #232323;
+$eds-color-black-77: #3a3a3a;
+$eds-color-black-67: #545454;
+$eds-color-black-58: #6c6c6c;
+$eds-color-black-42: #979797;
+$eds-color-black-30: #b3b4b4;
+$eds-color-black-18: #d1d1d1;
+$eds-color-black-8: #eaeaea;
+$eds-color-black-4: #f9f9f9;
+$eds-color-black-faded-25: color.adjust($eds-color-black, $alpha: -0.75);
+
+// Data Visualization (Primary & Secondary)
+$eds-color-red-75: #d1405f;
+$eds-color-red-50: #e18094;
+$eds-color-red-25: #f0bfca;
+$eds-color-red-10: #f9e6ea;
+$eds-color-red-bright-75: #f84056;
+$eds-color-red-bright-50: #fb808f;
+$eds-color-red-bright-25: #fdbfc7;
+$eds-color-red-bright-10: #fee6e9;
+$eds-color-red-dark-75: #8c405c;
+$eds-color-red-dark-50: #b38093;
+$eds-color-red-dark-25: #d9bfc9;
+$eds-color-red-dark-10: #f0e6e9;
+$eds-color-yellow-bright-75: #ffc240;
+$eds-color-yellow-bright-50: #ffd680;
+$eds-color-yellow-bright-25: #ffebbf;
+$eds-color-yellow-bright-10: #fff7e6;
+$eds-color-yellow-dark-75: #cfa140;
+$eds-color-yellow-dark-50: #dfc180;
+$eds-color-yellow-dark-25: #efe0bf;
+$eds-color-yellow-dark-10: #f9f3e6;
+$eds-color-turquoise-dark-75: #409a96;
+$eds-color-turquoise-dark-50: #80bcb9;
+$eds-color-turquoise-dark-25: #bfdddc;
+$eds-color-turquoise-dark-10: #e6f2f1;
+$eds-color-turquoise-bright-accessible: #1ba39c;
+$eds-color-turquoise-bright-accessible-75: #54bab5;
+$eds-color-turquoise-bright-accessible-50: #8dd1ce;
+$eds-color-turquoise-bright-accessible-25: #c6e8e6;
+$eds-color-turquoise-bright-accessible-10: #e8f6f5;
+
+// Data Visualization extended palette
+$eds-color-green-dark: #005929;
+$eds-color-green-dark-75: #40835f;
+$eds-color-green-dark-50: #80ac94;
+$eds-color-green-dark-25: #bfd6ca;
+$eds-color-green-dark-10: #e6eeea;
+$eds-color-green-bright: #1fa824;
+$eds-color-green-bright-75: #57be5b;
+$eds-color-green-bright-50: #8fd392;
+$eds-color-green-bright-25: #c7e9cb;
+$eds-color-green-bright-10: #e9f6e9;
+$eds-color-raspberry: #82004e;
+$eds-color-raspberry-75: #a1407a;
+$eds-color-raspberry-50: #c180a7;
+$eds-color-raspberry-25: #e0bfd3;
+$eds-color-raspberry-10: #f3e6ed;
+$eds-color-fushia: #c6007e;
+$eds-color-fushia-75: #d4409e;
+$eds-color-fushia-50: #e380bf;
+$eds-color-fushia-25: #f1bfdf;
+$eds-color-fushia-10: #f9e6f2;
+$eds-color-purple-dark: #381c80;
+$eds-color-purple-dark-75: #6a55a0;
+$eds-color-purple-dark-50: #9c8ec0;
+$eds-color-purple-dark-25: #cdc6df;
+$eds-color-purple-dark-10: #ebe8f2;
+$eds-color-amethyst: #753bbd;
+$eds-color-amethyst-75: #986cce;
+$eds-color-amethyst-50: #ba9dde;
+$eds-color-amethyst-25: #ddceef;
+$eds-color-amethyst-10: #f1ebf8;
+$eds-color-rust: #d22730;
+$eds-color-rust-75: #dd5d64;
+$eds-color-rust-50: #e99398;
+$eds-color-rust-25: #f4c9cb;
+$eds-color-rust-10: #fbe9ea;
+$eds-color-tangerine: #ed7000;
+$eds-color-tangerine-75: #f29440;
+$eds-color-tangerine-50: #f6b880;
+$eds-color-tangerine-25: #fbdbbf;
+$eds-color-tangerine-10: #fdf1e6;
+$eds-color-cobalt: #0032a0;
+$eds-color-cobalt-75: #4065b8;
+$eds-color-cobalt-50: #8099d0;
+$eds-color-cobalt-25: #bfcce7;
+$eds-color-cobalt-10: #e6ebf6;
+$eds-color-azure: #0071de;
+$eds-color-azure-75: #4094e6;
+$eds-color-azure-50: #80b8ef;
+$eds-color-azure-25: #bfdcf7;
+$eds-color-azure-10: #e6f1fc;
+
+// Brand Interface
+$eds-color-blue: #0072ce;

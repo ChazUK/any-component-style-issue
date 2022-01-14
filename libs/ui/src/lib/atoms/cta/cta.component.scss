@@ -1,0 +1,93 @@
+@use '../../styles/vars/colors';
+@use '../../styles/vars/fonts';
+@use '../../styles/vars/spacing';
+@use '../../styles/mixins/typography';
+
+:host {
+  &.eds-base-cta {
+    @include typography.bold;
+
+    display: inline-flex;
+    width: auto;
+    min-width: 12.5rem;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: spacing.$eds-spacing-2xs spacing.$eds-spacing-sm;
+    border: 0;
+    background-color: colors.$eds-color-black;
+    border-radius: 3.5rem;
+    color: colors.$eds-color-white;
+    cursor: pointer;
+    font-family: fonts.$eds-mark-pro;
+    font-size: fonts.$eds-font-size-sm;
+    line-height: 1.2;
+    text-decoration: none;
+
+    .eds-base-cta__icon {
+      margin-right: spacing.$eds-spacing-2xs;
+    }
+
+    &:focus {
+      outline: 2px solid colors.$eds-color-azure-50;
+    }
+
+    &:hover {
+      background-color: colors.$eds-color-black-77;
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      background-color: colors.$eds-color-black-18;
+      color: colors.$eds-color-black-58;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    &.eds-base-cta--dark {
+      background-color: colors.$eds-color-white;
+      color: colors.$eds-color-black;
+
+      &:disabled {
+        background-color: colors.$eds-color-black-18;
+        color: colors.$eds-color-black-58;
+      }
+    }
+
+    &.eds-base-cta--secondary {
+      border: 1px solid colors.$eds-color-black;
+      background-color: transparent;
+      color: colors.$eds-color-black;
+
+      &:disabled {
+        border: 1px solid colors.$eds-color-black-42;
+        color: colors.$eds-color-black-42;
+      }
+
+      &.eds-base-cta--dark {
+        border: 1px solid colors.$eds-color-white;
+        color: colors.$eds-color-white;
+
+        &:disabled {
+          border: 1px solid colors.$eds-color-black-18;
+          color: colors.$eds-color-black-18;
+        }
+      }
+    }
+
+    &.eds-base-cta--icon-right {
+      flex-direction: row-reverse;
+      .eds-base-cta__icon {
+        margin-right: 0;
+        margin-left: spacing.$eds-spacing-2xs;
+      }
+    }
+
+    &.eds-base-cta--small {
+      min-height: 2.5rem;
+      padding: spacing.$eds-spacing-3xs spacing.$eds-spacing-xs;
+      border-radius: 2.5rem;
+      font-size: fonts.$eds-font-size-sm;
+    }
+  }
+}

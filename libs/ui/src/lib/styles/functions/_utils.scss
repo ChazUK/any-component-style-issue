@@ -1,0 +1,11 @@
+@use 'sass:math';
+@use '../vars/config';
+
+@function px-to-rem($value, $base-px: config.$eds-baseline) {
+  @if math.unit($value) != 'px' {
+    @error "Value '#{$value}' must be in pixel units.";
+  }
+
+  $rem-value: math.div($value, $base-px) * 1rem;
+  @return $rem-value;
+}

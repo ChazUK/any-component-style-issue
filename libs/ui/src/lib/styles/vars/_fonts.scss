@@ -1,0 +1,49 @@
+@use '../functions/utils';
+@use './config';
+
+// Fonts
+$eds-mark-pro: 'FF Mark Pro', arial, sans-serif;
+$eds-mark-narrow: 'FF Mark Narrow', arial, sans-serif;
+$eds-thorndale: 'Thorndale Regular', georgia, serif;
+$fonts: (
+  'FF Mark Pro': (
+    'family': $eds-mark-pro,
+    'weights': (
+      'regular': 400,
+      'bold': 700,
+      'heavy': 800,
+    ),
+  ),
+  'FF Mark Narrow': (
+    'family': $eds-mark-narrow,
+    'weights': (
+      'regular': 400,
+    ),
+  ),
+  'Thorndale Regular': (
+    'family': $eds-thorndale,
+    'weights': (
+      'regular': 400,
+    ),
+  ),
+);
+$font-weights: (
+  'regular': 400,
+  'bold': 700,
+  'heavy': 800,
+);
+
+// Font Size
+$eds-font-size-xs: utils.px-to-rem(14px);
+$eds-font-size-sm: utils.px-to-rem(config.$eds-baseline);
+$eds-font-size-md: utils.px-to-rem(18px);
+$eds-font-size-lg: utils.px-to-rem(20px);
+$eds-font-size-xl: utils.px-to-rem(22px);
+$eds-font-size-2xl: utils.px-to-rem(24px);
+$eds-font-size-3xl: utils.px-to-rem(28px);
+$eds-font-size-4xl: utils.px-to-rem(32px);
+$eds-font-size-5xl: utils.px-to-rem(36px);
+$eds-font-size-6xl: utils.px-to-rem(40px);
+$eds-font-size-7xl: utils.px-to-rem(42px);
+$eds-font-size-8xl: utils.px-to-rem(48px);
+$eds-font-size-9xl: utils.px-to-rem(56px);

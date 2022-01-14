@@ -1,0 +1,103 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { moduleMetadata } from '@storybook/angular';
+import { BannerHeroComponent } from './banner-hero.component';
+import { BannerHeroModule } from './banner-hero.module';
+import { RouterTestingModule } from '@angular/router/testing';
+
+<Meta
+  title="Organisms/Banners/Banner Hero"
+  component={BannerHeroComponent}
+  decorators={[
+    moduleMetadata({
+      imports: [BannerHeroModule, RouterTestingModule],
+    }),
+  ]}
+/>
+
+# Banner Hero
+
+The Banner Hero displays a full page width image and/or [Pattern](?path=/docs/atoms-pattern) with accompanying title and optional body copy and additional CTA Link.
+
+## Variants
+
+### With Image
+
+Display an image across the full page width.
+
+<Canvas>
+  <Story
+    name="with Image"
+    args={{
+      title: 'Vanguard. Zusammen mehr vermögen',
+      body: 'Vanguard ist mit über 8 Billionen Euro verwaltetem Vermögen einer der weltweit führenden  Vermögensverwalter. Aber vor allem freuen wir uns, über 30 Millionen Menschen zu unterstützen, Ihre finanziellen Ziele zu erreichen.',
+      image: 'images/background-large.jpg',
+      cta: {
+        text: 'Jetzt Anlagevorschlag erstellen',
+        routerLink: 'home',
+      },
+    }}
+    argTypes={{
+      showPattern: { table: { disable: true } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### With Pattern
+
+Display the Simplified Pattern across the full page width.
+
+<Canvas>
+  <Story
+    name="with Pattern"
+    args={{
+      title: 'Vanguard. Zusammen mehr vermögen',
+      body: 'Vanguard ist mit über 8 Billionen Euro verwaltetem Vermögen einer der weltweit führenden  Vermögensverwalter. Aber vor allem freuen wir uns, über 30 Millionen Menschen zu unterstützen, Ihre finanziellen Ziele zu erreichen.',
+      showPattern: true,
+      cta: {
+        text: 'Jetzt Anlagevorschlag erstellen',
+        routerLink: 'home',
+      },
+    }}
+    argTypes={{
+      showPattern: { table: { disable: true } },
+      image: { table: { disable: true } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### With Pattern & Image
+
+Display the Simplified Pattern with a transparent panel revealing an image across the full page width.
+
+<Canvas>
+  <Story
+    name="with Pattern & Image"
+    args={{
+      title: 'Vanguard. Zusammen mehr vermögen',
+      body: 'Vanguard ist mit über 8 Billionen Euro verwaltetem Vermögen einer der weltweit führenden  Vermögensverwalter. Aber vor allem freuen wir uns, über 30 Millionen Menschen zu unterstützen, Ihre finanziellen Ziele zu erreichen.',
+      image: 'images/background-large.jpg',
+      showPattern: true,
+      cta: {
+        text: 'Jetzt Anlagevorschlag erstellen',
+        routerLink: 'home',
+      },
+    }}
+    argTypes={{
+      showPattern: { table: { disable: true } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## API
+
+Selector: `eds-base-banner-hero`
+
+<ArgsTable of={BannerHeroComponent} />
+
+export const Template = (args) => ({ props: args });

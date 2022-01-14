@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use 'mixins/breakpoints';
+@use 'mixins/grid';
+
+.grid {
+  display: grid;
+  column-gap: map.get(grid.$gutter-horizontal, 1);
+  grid-template-columns: repeat(grid.$num-columns, minmax(0, 1fr));
+  row-gap: grid.$gutter-vertical;
+
+  + .grid {
+    margin-top: grid.$gutter-vertical;
+  }
+
+  &.grid--no-gap {
+    row-gap: 0;
+  }
+
+  &.grid--no-gutter {
+    column-gap: 0;
+  }
+
+  @for $i from 1 through grid.$num-columns {
+    .col-#{$i} {
+      grid-column-end: span #{$i};
+    }
+
+    @if $i < grid.$num-columns {
+      .col-push-#{$i} {
+        grid-column-start: $i + 1;
+      }
+    }
+  }
+}
+
+@each $breakpoint in map-keys(breakpoints.$eds-breakpoints) {
+  $infix: breakpoints.breakpoint-infix($breakpoint);
+  $gutter-horizontal: map.get(grid.$gutter-horizontal, $breakpoint);
+  @include grid.define-grid($gutter-horizontal, $breakpoint, $infix);
+}

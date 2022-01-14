@@ -1,0 +1,22 @@
+<ng-container *ngIf="image; else noImage">
+  <div class="container grid">
+    <div class="eds-base-quotation__copy col-12 col-md-6 col-md-push-1">
+      <p class="eds-base-quotation__quote">{{ quote }}</p>
+      <p class="eds-base-quotation__author">{{ author }}</p>
+      <p class="eds-base-quotation__occupation">{{ occupation }}</p>
+    </div>
+    <div class="col-4 eds-base-quotation__image">
+      <img [src]="image" [alt]="altText" />
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noImage>
+  <div class="container grid">
+    <div class="eds-base-quotation__copy col-12 col-md-8 col-md-push-2">
+      <p class="eds-base-quotation__quote">{{ quote }}</p>
+      <p class="eds-base-quotation__author">{{ author }}</p>
+      <p class="eds-base-quotation__occupation">{{ occupation }}</p>
+    </div>
+  </div>
+</ng-template>

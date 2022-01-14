@@ -1,0 +1,8 @@
+@use '../functions/utils';
+@use '../vars/spacing';
+
+$container-padding: spacing.$eds-spacing-sm;
+$container-max-widths: (
+  lg: utils.px-to-rem(1024px),
+  xl: utils.px-to-rem(1200px),
+);
