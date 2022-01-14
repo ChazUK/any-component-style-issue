@@ -1,6 +1,12 @@
+import { MapTo } from '@adobe/aem-angular-editable-components';
 import { Component, HostBinding, Input } from '@angular/core';
 import classNames from 'classnames';
 
+const QuotationComponentConfig = {
+  emptyLabel: 'Quote Block',
+  isEmpty: (cqModel: any) =>
+    !cqModel || !cqModel.src || cqModel.src.trim().length < 1,
+};
 @Component({
   selector: 'eds-base-quotation',
   templateUrl: './quotation.component.html',
@@ -19,3 +25,7 @@ export class QuotationComponent {
     });
   }
 }
+MapTo('aemAngularIntegration/components/image')(
+  QuotationComponent,
+  QuotationComponentConfig
+);
